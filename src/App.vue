@@ -25,7 +25,7 @@
     filterResult (filtersOn) {
         this.store.appliedFilters = filtersOn
 
-        recoverymovie ();
+        recoveryMovie ();
 
         console.log (filtersOn);
 

@@ -2,7 +2,7 @@
     <form class="row g-3 d-flex text-center justify-content-center" @submit.prevent="search">
         <div class="col-md-2 ms-3">
             <label for="inputTitle" class="form-label">Title</label>
-            <input type="text" class="form-control" id="input-title" placeholder="Titolo" v-model="results.title">
+            <input type="text" class="form-control" id="input-title" placeholder="Titolo" v-model="store.inputTitle">
         </div>
         <div class="col-md-2">
             <label for="inputOriginalTitle" class="form-label">Original Title</label>
@@ -31,8 +31,8 @@
 
     <div class="d-flex justify-content-center">
         <div class="alert alert-primary " role="alert">
-        Trovati {{store.total_results}} Titoli
-        per un totale di {{store.total_pages}} pagina/e.
+        Trovati {{total_results}} Titoli
+        per un totale di {{total_pages}} pagina/e.
         </div>
     </div>
 </template>
