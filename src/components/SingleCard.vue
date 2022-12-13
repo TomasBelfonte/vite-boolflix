@@ -1,7 +1,7 @@
 <template lang="">
     <div class="d-flex">
         <div class="card my-5 text-center border-danger position-relative" style="width: 13rem;" >                        
-            <img class="tb-card-image card-img-top bg-black" :src="'https://image.tmdb.org/t/p/w342/' + movieDetail.poster_path" alt="Card image cap">
+            <img class="tb-card-image card-img-top bg-black" :src="getPosterImage(movieDetail.poster_path)" alt="Card image cap">
             <div class="tb-card-detail card-body position-absolute top-0">
                 <p class="card-text text-danger">Title: {{movieDetail.title}}</p>
                 <p class="card-text text-danger">Original Title: {{movieDetail.original_title}}</p>
@@ -22,11 +22,30 @@
 
 
         methods: {
-            image() {
+            getPosterImage (posterPath) {
+
+                console.log('poster path vale', posterPath);
+
+                // fi qua è ccorretto
+
+                // 'https://image.tmdb.org/t/p/w342/' + movieDetail.poster_path
+                /*
                 if (!src === "") {
                     src="'https://image.tmdb.org/t/p/w342/' + movieDetail.poster_path"
                 } else {
                     src = '/vite.svg'
+                }
+
+                return (imageApplied);
+                */
+
+                if (posterPath == null) {
+
+                    return '/vite.svg'; 
+
+                } else {
+
+                    return 'https://image.tmdb.org/t/p/w342/' + posterPath;
                 }
             }
     }
