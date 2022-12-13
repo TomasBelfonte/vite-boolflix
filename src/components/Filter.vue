@@ -31,8 +31,8 @@
 
     <div class="d-flex justify-content-center">
         <div class="alert alert-primary " role="alert">
-        Trovati {{total_results}} Titoli
-        per un totale di {{total_pages}} pagina/e.
+        Trovati {{results.total_results}} Titoli
+        per un totale di {{results.total_pages}} pagina/e.
         </div>
     </div>
 </template>

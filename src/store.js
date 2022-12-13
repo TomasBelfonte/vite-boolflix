@@ -11,19 +11,19 @@ export const store = reactive({
 
 export function recoveryMovie (movie) {
 
-    axios.get("https://api.themoviedb.org/3/movie/550?api_key=1e5c8bbd04cf0df6203a78af9152af23", {
+    axios.get("https://api.themoviedb.org/3/search/movie/?api_key=1e5c8bbd04cf0df6203a78af9152af23", {
 
         params: {
             query: store.inputTitle
         }
     }) 
     
-    .then((results) => {
+    .then((resp) => {
 
-    store.movieList = results;
+    store.movieList = resp.data.results;
     
 
-    console.log(store);
+    console.log(resp);
 
 
     })
