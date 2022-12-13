@@ -1,5 +1,5 @@
 <template >
-    <form class="row g-3 d-flex text-center justify-content-center" @submit.prevent="search">
+    <form class="row g-3 d-flex text-center justify-content-center bg-black" @submit.prevent="search">
         <div class="col-md-2 ms-3">
             <label for="inputTitle" class="form-label">Title</label>
             <input type="text" class="form-control" id="input-title" placeholder="Titolo" v-model="store.inputTitle">
@@ -29,7 +29,7 @@
 
     
 
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center bg-black pb-5">
         <div class="alert alert-primary " role="alert">
         Trovati {{results.total_results}} Titoli
         per un totale di {{results.total_pages}} pagina/e.
