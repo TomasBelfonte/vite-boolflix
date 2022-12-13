@@ -2,7 +2,7 @@
     <div class="d-flex">
         <div class="card my-5 text-center border-danger position-relative" style="width: 13rem;" >                        
             <img class="tb-card-image card-img-top bg-black" :src="getPosterImage(movieDetail.poster_path)" alt="Card image cap">
-            <div class="tb-card-detail card-body position-absolute top-0">
+            <div class="tb-card-detail card-body position-absolute top-0 ">
                 <p class="card-text text-danger">Title: {{movieDetail.title}}</p>
                 <p class="card-text text-danger">Original Title: {{movieDetail.original_title}}</p>
                 <p class="card-text text-danger">Release date: {{movieDetail.release_date}}</p>
@@ -41,7 +41,7 @@
 
                 if (posterPath == null) {
 
-                    return '/vite.svg'; 
+                    return '/the-lich-king.png'; 
 
                 } else {
 
@@ -56,9 +56,12 @@
 
     .tb-card-image {
         z-index: 10;
+        display: flex;
+        flex-grow: 1;
     }
     .tb-card-image:hover {
         opacity: 0 !important;
+        
     }
 
     
