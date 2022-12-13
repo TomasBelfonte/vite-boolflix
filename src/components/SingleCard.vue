@@ -1,7 +1,7 @@
 <template lang="">
     <div class="d-flex">
         <div class="card my-5 text-center border-danger position-relative" style="width: 13rem;" >                        
-            <img class="tb-card-image card-img-top bg-black" :src=image>
+            <img class="tb-card-image card-img-top bg-black" :src="'https://image.tmdb.org/t/p/w342/' + movieDetail.poster_path" alt="Card image cap">
             <div class="tb-card-detail card-body position-absolute top-0">
                 <p class="card-text text-danger">Title: {{movieDetail.title}}</p>
                 <p class="card-text text-danger">Original Title: {{movieDetail.original_title}}</p>
@@ -28,9 +28,7 @@
                 } else {
                     src = '/vite.svg'
                 }
-            },
-
-            image ()
+            }
     }
 
 }
