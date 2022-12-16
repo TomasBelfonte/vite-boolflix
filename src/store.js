@@ -25,7 +25,7 @@ export function recoveryMovie (movie) {
     .then((resp) => {
 
     store.movieList = resp.data.results;
-    store.moviePagination = resp.data
+
 
     
 
@@ -48,7 +48,7 @@ export function recoveryTv (tv) {
     .then((resp) => {
 
     store.tvList = resp.data.results;
-    store.moviePagination = resp.data
+
 
     
 

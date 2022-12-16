@@ -6,9 +6,9 @@
                 <div class="col d-flex" v-for="(single, i) in store.movieList" :key="i">
                     <SingleCardMovie :movieDetail="single" ></SingleCardMovie>
                 </div>
-
-
             </div>
+
+            
         </div>
     </div>
 
