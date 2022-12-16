@@ -2,11 +2,12 @@ import { reactive } from "vue";
 import axios from "axios";
 
 export const store = reactive({
-
+        currentPage: 1,
         movieList: [],
         inputTitle: "",
         appliedFilters: null,
-        filtersOn: null
+        filtersOn: null,
+        moviePagination:{}
     });
 
 export function recoveryMovie (movie) {
@@ -21,6 +22,8 @@ export function recoveryMovie (movie) {
     .then((resp) => {
 
     store.movieList = resp.data.results;
+    store.moviePagination = resp.data
+
     
 
     console.log(resp);
