@@ -1,6 +1,6 @@
 <template>
     <div class="bg-black"> 
-        <h1 class="text-danger fw-bold text-center py-5" >BoolFlix</h1>
+        <h1 class="text-danger fw-bold text-center py-5 mb-0" >BoolFlix</h1>
     </div>
 </template>
 

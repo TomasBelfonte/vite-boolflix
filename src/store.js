@@ -2,11 +2,14 @@ import { reactive } from "vue";
 import axios from "axios";
 
 export const store = reactive({
-        currentPage: 1,
+
         movieList: [],
+        tvList:[],
         inputTitle: "",
         appliedFilters: null,
+        appliedFiltersTv: null,
         filtersOn: null,
+        filtersOnTv: null,
         moviePagination:{}
     });
 
@@ -22,6 +25,29 @@ export function recoveryMovie (movie) {
     .then((resp) => {
 
     store.movieList = resp.data.results;
+    store.moviePagination = resp.data
+
+    
+
+    console.log(resp);
+
+
+    })
+
+};
+
+export function recoveryTv (tv) {
+
+    axios.get("https://api.themoviedb.org/3/search/tv/?api_key=1e5c8bbd04cf0df6203a78af9152af23", {
+
+        params: {
+            query: store.inputTitle
+        }
+    }) 
+    
+    .then((resp) => {
+
+    store.tvList = resp.data.results;
     store.moviePagination = resp.data
 
     

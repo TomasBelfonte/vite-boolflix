@@ -30,7 +30,7 @@
 
                 console.log('poster path vale', posterPath);
 
-                // fi qua è ccorretto
+                // fi qua è corretto
 
                 // 'https://image.tmdb.org/t/p/w342/' + movieDetail.poster_path
                 /*

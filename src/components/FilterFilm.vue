@@ -1,10 +1,13 @@
 <template >
-    <form class="row g-3 d-flex text-center justify-content-center bg-black" @submit.prevent="search">
+    <form class="row g-3 d-flex text-center justify-content-center bg-black mt-0" @submit.prevent="search">
+        <div>
+            <h1 class="text-danger fw-bold" >Film</h1>
+        </div>
         <div class="col-md-2 ms-3">
             <label for="inputTitle" class="form-label">Title</label>
             <input type="text" class="form-control" id="input-title" placeholder="Titolo" v-model="store.inputTitle">
         </div>
-        <div class="col-md-2">
+        <!-- <div class="col-md-2">
             <label for="inputOriginalTitle" class="form-label">Original Title</label>
             <input type="text" class="form-control" id="input-original-title" placeholder="Titolo Originale" v-model="results.original_title">
         </div>
@@ -19,7 +22,7 @@
         <div class="col-md-2">
             <label for="inputVote" class="form-label">Gender</label>
             <input type="text" class="form-control" id="input-vote" placeholder="Genere" v-model="results.vote_average">
-        </div>
+        </div> -->
         
         <div class="d-flex justify-content-center m-5 gap-3">
             <button type="reset" class="btn btn-danger">Resetta</button>
@@ -29,12 +32,12 @@
 
     
 
-    <div class="d-flex justify-content-center bg-black pb-5">
+    <!-- <div class="d-flex justify-content-center bg-black pb-5">
         <div class="alert alert-primary " role="alert">
         Trovati {{store.moviePagination.total_results}} Titoli
         per un totale di {{store.moviePagination.total_pages}} pagina/e.
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script>
