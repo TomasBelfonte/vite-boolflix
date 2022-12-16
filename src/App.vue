@@ -44,12 +44,13 @@
 
     },
 
-    filterResultTv (filtersOnTv) {
-        this.store.appliedFiltersTv = filtersOnTv
+    filterResultTv () {        
 
-        recoveryTv ();
+        console.log('emit arrivato');
 
-        console.log (filtersOnTv);
+        recoveryTv();
+
+        //console.log (filtersOnTv);
 
     }    
     },

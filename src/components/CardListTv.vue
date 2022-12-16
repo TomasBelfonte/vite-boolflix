@@ -3,6 +3,7 @@
     <div class="bg-dark">
         <div class="container">
             <div class="row d-flex ">
+
                 <div class="col d-flex" v-for="(single, i) in store.tvList" :key="i">
                     <SingleCardTv :tvDetail="single" ></SingleCardTv>
                 </div>
@@ -17,7 +18,7 @@
 <script>
 import axios from "axios";
 
-import SingleCardTv from "./SingleCardMovie.vue";
+import SingleCardTv from "./SingleCardTv.vue";
 import { store, recoveryTv,} from "../store.js"
 
 

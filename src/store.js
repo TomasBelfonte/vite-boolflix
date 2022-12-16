@@ -47,12 +47,9 @@ export function recoveryTv (tv) {
     
     .then((resp) => {
 
-    store.tvList = resp.data.results;
+        store.tvList = resp.data.results;
 
-
-    
-
-    console.log(resp);
+        console.log(resp);
 
 
     })

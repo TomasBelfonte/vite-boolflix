@@ -24,21 +24,14 @@ export default {
     data() {
         return {
             store,
-            results: {
-                backdrop_path:"",
-                first_air_date:"",
-                original_name:"",
-                name:"",
-                original_language:"",
-                vote_average:""
-            }
         };
     },
     emits: ["filteredTv"],
     methods: {
         searchTv () {
-            recoveryTv();
-            this.$emit("filteredTv", {...this.results});
+            
+            console.log('emit');
+            this.$emit("filteredTv");
         }
     }
 
