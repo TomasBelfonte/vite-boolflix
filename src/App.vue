@@ -1,14 +1,15 @@
 <template>
     <div>
         <Header></Header>
+    </div >
+    <div class="d-flex justify-content-center bg-black" >
+        <FilterFilm @filtered="filterResult"></FilterFilm>
+        <FilterTv @filteredTv="filterResultTv"></FilterTv>        
     </div>
+
     <div class="d-flex justify-content-center bg-black mt-0 pt-0">        
         <div class="flex-grow-1">
-            <FilterFilm @filtered="filterResult"></FilterFilm>
             <CardListMovie></CardListMovie>
-        </div>
-        <div class="flex-grow-1">
-            <FilterTv @filteredTv="filterResultTv"></FilterTv>
             <CardListTv></CardListTv>
         </div>
     </div>

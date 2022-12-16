@@ -15,13 +15,6 @@
     </form>
 
     
-
-    <!-- <div class="d-flex justify-content-center bg-black pb-5">
-        <div class="alert alert-primary " role="alert">
-        Trovati {{store.moviePagination.total_results}} Titoli
-        per un totale di {{store.moviePagination.total_pages}} pagina/e.
-        </div>
-    </div> -->
 </template>
 
 <script>
